@@ -3,21 +3,18 @@ package com.mrs.patient_service.model;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
 public class Patient {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String email;
-	private String Address;
+	private String address;
 	private LocalDate dob;
 	private LocalDate regd_date;
 	
-	
+
 	public int getId() {
 		return id;
 	}
@@ -37,10 +34,10 @@ public class Patient {
 		this.email=email;
 	}
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 	public LocalDate getDob() {
 		return dob;

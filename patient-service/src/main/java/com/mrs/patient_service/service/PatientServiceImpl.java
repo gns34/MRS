@@ -1,5 +1,6 @@
 package com.mrs.patient_service.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,10 @@ public class PatientServiceImpl implements PatientService {
 		return patientRepository.findById(id);
 	}
 
+	public List<Patient> getAllPatients(){
+		return patientRepository.findAll();
+	}
+	
 	public Patient updatePatient(Patient patient) {
 
 		return null;
